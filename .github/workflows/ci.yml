@@ -1,0 +1,20 @@
+name: Build and integration tests
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: dotnet restore src/TraceFlow.Web
+      - run: dotnet build src/TraceFlow.Web --no-restore
+      - run: python -m unittest discover -s tests -v

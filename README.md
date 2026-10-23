@@ -1,4 +1,7 @@
-# TraceFlow MES
+# TraceFlow MES — Historical predecessor
+
+> [!IMPORTANT]
+> This project has been consolidated into [TraceGate Manufacturing Traceability](https://github.com/weiyu1029/tracegate-edge) as the maintained [.NET MES Lab](https://github.com/weiyu1029/tracegate-edge/tree/main/labs/dotnet-mes). The canonical repository now contains the current code, renamed interface, screenshots, documentation, and combined CI. This repository remains available as the historical predecessor.
 
 A small manufacturing execution learning lab: **work order → serial number → station execution → trace history**.
 
